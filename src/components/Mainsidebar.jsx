@@ -52,7 +52,7 @@ const Sidebar = () => {
               {masterDropdownVisible && (
                 <ul className="drop_nav">
                   <li>
-                    <Link to={"/department"}>Department</Link>
+                    <Link to={"/department"}>Departments</Link>
                   </li>
                 </ul>
               )}

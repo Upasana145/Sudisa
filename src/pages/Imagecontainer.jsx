@@ -172,10 +172,13 @@ const Imagecontainer = ({ users, handleButtonClick, selectedFilter }) => {
           filteredOptions.map((item, index) => (
             <div className="imagecontainerchild" key={index}>
               <div className="img_child">
+                {console.log(item?.image)}
                 <img
-                  src={imageArray[index]}
+                  src={`http://10.12.1.151:4002/uploads/${item?.image}`}
                   alt=""
-                  onClick={() => openPopup(imageArray[index])}
+                  onClick={() =>
+                    openPopup(`http://10.12.1.151:4002/uploads/${item?.image}`)
+                  }
                 />
                 <div className="img_dept">{item?.dept_name}</div>
                 <div className="img_cam">
@@ -195,7 +198,9 @@ const Imagecontainer = ({ users, handleButtonClick, selectedFilter }) => {
           <span className="close" onClick={closePopup}>
             &times;
           </span>
-          <img src={popupImage} alt="" className="popup-image" />
+          <div className="img-container">
+            <img src={popupImage} alt="" className="popup-image" />
+          </div>
         </div>
       )}
     </div>
