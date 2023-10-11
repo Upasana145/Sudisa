@@ -15,7 +15,7 @@ const Imagecontainer = ({ users, handleButtonClick, selectedFilter }) => {
   console.log(users, "imageCotainerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
   console.log("Selected Filter:", selectedFilter);
   // const camera = users.map((item, index) => item.camera);
-  // const dept_name = users.map((item, index) => item.image.data);
+  // const dept_name =c users.map((item, index) => item.image.data);
   // console.log(dept_name, "ddddddddddddddddddddd");
   const cameraAndDept = users.map((item, index) => ({
     camera: item.camera,
@@ -182,7 +182,7 @@ const Imagecontainer = ({ users, handleButtonClick, selectedFilter }) => {
                 />
                 <div className="img_dept">{item?.dept_name}</div>
                 <div className="img_cam">
-                  Cam: <span>{item?.camera}</span>
+                  <span>{item?.camera}</span>
                 </div>
               </div>
             </div>
